@@ -1,0 +1,22 @@
+.container {
+    height: 90%;
+    width: 750px;
+    padding:5%;
+    background-color: aliceblue;
+
+    #buttons {
+        display:flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 11px auto;
+        width: 250px;
+    }
+}
+
+.goBack {
+    width: 250px;
+    margin-left: 42%;
+    margin-top: 30px;
+}

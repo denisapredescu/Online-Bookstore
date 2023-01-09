@@ -1,0 +1,42 @@
+
+<div class="container">
+    <h1 class="title">
+      {{ title }}
+    </h1>
+  
+    <form [formGroup]="authorForm" class="form">
+  
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" formControlName="firstName"/>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" formControlName="lastName"/>
+      </mat-form-field>
+
+    </form>
+  
+    <form [formGroup]="authorInfoForm" class="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Nationality</mat-label>
+        <input matInput placeholder="Nationality" formControlName="nationality"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Birth year</mat-label>
+        <input matInput placeholder="Birth year" formControlName="birthYear"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Death year</mat-label>
+        <input matInput placeholder="Death year" formControlName="deathYear"/>
+      </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="!data.author ? add() : edit()">
+      Save
+    </button>
+</div> 
+  

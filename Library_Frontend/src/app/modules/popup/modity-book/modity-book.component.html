@@ -1,0 +1,66 @@
+<div class="container">
+  <h1 class="title">
+    {{ title }}
+  </h1>
+
+  <form [formGroup]="bookForm" class="form">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" formControlName="name"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" formControlName="price"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>NoPages</mat-label>
+      <input matInput placeholder="NoPages" formControlName="noPages"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Year</mat-label>
+      <input matInput placeholder="Year" formControlName="year"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>NoVolume</mat-label>
+      <input matInput placeholder="NoVolume" formControlName="noVolume"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Series</mat-label>
+      <input matInput placeholder="Series" formControlName="seriesName"/>
+    </mat-form-field>
+
+    <div *ngIf="!data.book">
+      <p id="CategoryTitle">Categories</p>
+      <div id="formElement" *ngFor="let category of categories">
+        <input class="form-check-input" type="checkbox" id="flexCheckDefault" (click)="changeValue(category)">
+        <label class="form-check-label" for="flexCheckDefault">
+          {{category.name}}
+        </label>
+      </div>
+    
+    </div>
+
+    <label>
+      <select formControlName="authorId" id="selectAuthor">
+        <option value="null" disabled selected hidden>Author</option>
+        <option value="none">None</option>
+        <option 
+        *ngFor="let author of authors" [selected]="authorId == author.id"
+        value={{author.id}}>{{author.firstName + " " + author.lastName}}</option> 
+      </select>
+    </label>
+
+  </form>
+
+  <button mat-raised-button (click)="!data.book ? add() : edit()">
+    Save
+  </button>
+
+</div> 
+

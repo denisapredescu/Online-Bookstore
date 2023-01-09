@@ -1,0 +1,48 @@
+<h1>
+  Bookstore  
+</h1>
+
+<button mat-raised-button class="button" (click)="logout()" appHoverButton *ngIf="sharedEmail !== 'default email'">
+  Logout
+</button>
+
+<button mat-raised-button class="button" (click)="auth()" appHoverButton>
+  Go to auth
+</button>
+
+<button mat-raised-button class="button" (click)="goToUserBasket()" appHoverButton>
+  Basket
+</button>
+
+<button mat-raised-button class="button" (click)="goToOrders()" appHoverButton>
+  Orders
+</button>
+
+<button mat-raised-button class="filtersButton" (click)="showFilters()" appHoverButton>
+  Filters
+</button>
+
+<div class="dropdown-menu pb-4 bg-white border" *ngIf="canDisplay">
+  <div class="p-2 text-center border-bottom">
+    <button type="button" class="btn btn-outline-primary" (click)="saveChangings()">Filter</button>
+  </div>
+  <mat-tab-group class="sorting">
+    <mat-tab label="Categories"><app-category  [categoriesList] = "categoriesList" (chosenCategories) = "receiveMessageFromCategory($event)"></app-category></mat-tab>
+    <mat-tab label="Authors"><app-author [authorsList] = "authorsList" (chosenAuthors) = "receiveMessageFromAuthor($event)"></app-author></mat-tab>
+  </mat-tab-group>
+</div>
+
+<div class="d-flex justify-content-start flex-wrap books">
+  <section  *ngIf="role === 'Admin'" class="pb-4 bg-white border rounded-5" id="dimensions">
+    <button type="button" class="btn btn-default plus" (click)="add()">
+      + 
+    </button>
+  </section>
+
+  <app-book *ngFor="let bookDetails of books" [book] = "bookDetails" [role] = "role" (modifiedList) = "receiveModifiedListOfBooks($event)"></app-book>
+</div>
+
+
+
+
+

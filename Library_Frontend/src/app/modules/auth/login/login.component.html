@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="loginForm">
+    <div class="text-center mb-3">
+
+      <!-- Email input -->
+      <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" id="email"  placeholder="Email" formControlName="email"/>
+      </mat-form-field>
+  
+      <!-- Password input -->
+      <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" id="password" placeholder="Password" formControlName="password"/>
+      </mat-form-field>
+      
+      <button type="submit" id="submit" class="btn btn-primary btn-block mb-4" (click)="login()">{{buttonText}}</button>
+      <!-- Register buttons -->
+      <div class="text-center">
+        <p>Not a member? <a [routerLink]="" (click)="goToRegister()">Register</a></p>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<div class="alert alert-danger" [hidden]="!error">{{error}}</div>
+ 

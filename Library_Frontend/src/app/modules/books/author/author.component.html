@@ -1,0 +1,72 @@
+ 
+ 
+ <div class="form-check formDisplay" *ngIf="!isAdmin()">
+  <div id="formElement" *ngFor="let author of authorsList">
+    <div>
+      <input class="form-check-input" type="checkbox" value=""  (click)="changeValue(author)" id="flexCheckDefault" [checked]="isChecked(author)" >
+      <label class="form-check-label" for="flexCheckDefault">
+        {{author.firstName +  " " + author.lastName}}
+      </label>
+    </div>
+    <button type="button" class="btn btn-link" (click)="info(author)">More details</button>
+  </div>
+</div>
+
+
+ <div class = "container" *ngIf="isAdmin()">   
+    <table mat-table [dataSource]=" authorsList" class="mat-elevation-z8 demo-table table">
+
+    <ng-container matColumnDef="Name">
+      <th [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-header-cell *matHeaderCellDef>Name</th>
+      <td [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-cell *matCellDef="let element">{{element.firstName +  " " + element.lastName}}</td>
+    </ng-container>
+
+    <ng-container  matColumnDef="More details">
+      <th [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-header-cell *matHeaderCellDef>More details</th>
+      <td [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-cell *matCellDef="let element" (click)="info(element)">
+        <mat-icon>
+          add
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container *ngIf="isAdmin()" matColumnDef="edit">
+        <th [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-header-cell *matHeaderCellDef>Edit</th>
+        <td [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-cell *matCellDef="let element" (click)="edit(element)">
+          <mat-icon>
+            edit
+          </mat-icon>
+        </td>
+      </ng-container>
+
+    <ng-container *ngIf="isAdmin()" matColumnDef="delete">
+      <th [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-header-cell *matHeaderCellDef>Delete</th>
+      <td [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-cell *matCellDef="let element" (click)="delete(element)">
+        <mat-icon>
+          delete
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container  matColumnDef="select">
+      <th [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-header-cell *matHeaderCellDef>Select</th>
+      <td [class.user]="!isAdmin()" [class.admin]='isAdmin()' mat-cell *matCellDef="let element" (click)="changeValue(element)">
+        <mat-icon>
+          add
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+    <button mat-raised-button *ngIf="isAdmin()" (click)="add()" class="add-button">
+        Add Author
+    </button>
+</div>
+
+
+
+

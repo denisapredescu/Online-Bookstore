@@ -1,0 +1,62 @@
+<!-- <span class="border border-secondary">
+<p>book works!</p>
+
+<img 
+    src="../../../../assets/pictures/cerinte.png" 
+    class="rounded mx-auto d-block" 
+    alt="poza1">
+
+</span> -->
+
+
+<section class="pb-4 bg-white border rounded-5" id="dimensions">
+  
+      
+        <!-- <section class="p-4 text-center">
+            <img 
+            src="../../../../assets/pictures/cerinte.png"  
+            class="img-fluid shadow-4" 
+            alt="test">
+        </section> -->
+
+
+        <div id="infoBook">
+            <dl class="row" id="textDetails">
+                <dt class="col-sm-4">Name</dt>
+                <dd class="col-sm-7">{{book.name}}</dd>
+            
+                <dt class="col-sm-4">Price</dt>
+                <dd class="col-sm-7">{{book.price}}</dd>
+            
+                <dt class="col-sm-4" *ngIf="book.year !== 0">Year</dt>
+                <dd class="col-sm-7" *ngIf="book.year !== 0">{{book.year}}</dd>
+
+                <dt class="col-sm-4">No. pages</dt>
+                <dd class="col-sm-7">{{book.noPages}}</dd>
+
+                <dt class="col-sm-4" *ngIf="book.noVolume !== 0">No. volume</dt>
+                <dd class="col-sm-7" *ngIf="book.noVolume !== 0">{{book.noVolume}}</dd>
+
+                <dt class="col-sm-4" *ngIf="book.seriesName !== ''">Series Name</dt>
+                <dd class="col-sm-6" *ngIf="book.seriesName !== ''">{{book.seriesName}}</dd>
+
+                <dt class="col-sm-4" *ngIf="book.authorId !== null">Author</dt>
+                <dd class="col-sm-6" *ngIf="book.authorId !== null">{{author.firstName + " " + author.lastName}}</dd>
+                
+                <dt class="col-sm-4" *ngIf="categories.length !== 0">Category</dt>
+                <dd class="col-sm-5">
+                    <div class="aranjare">
+                        <p *ngFor="let category of categories">{{category}}</p>
+                    </div>
+                </dd>
+            </dl> 
+        </div>
+            
+      
+        <div class="p-2 text-center border-top">
+            <button type="button" class="btn btn-link" (click)="addToBasket(book)">{{addToBasketText}}</button>
+            <button type="button" class="btn btn-link" *ngIf = "role === 'Admin'" (click)="edit(book)">Edit</button>
+            <button type="button" class="btn btn-link" *ngIf = "role === 'Admin'" (click)="delete(book)">Delete</button> 
+        </div>
+    
+</section>

@@ -1,0 +1,84 @@
+// This one must be in the global style (or ng-deep but it's deprecated :( )
+.mat-select-panel{
+  overflow: hidden !important;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  margin-left: 50px;
+  margin-bottom: 45px;
+}
+
+footer{
+  border-top:2px solid gray; 
+  height: 44px;
+  padding-top: 10px;
+  text-align:right;
+}
+
+.custom-panel {
+  max-height: 200px; // mat-select-panel height = 256px. 200 + 10 + 44 + 2
+  overflow: auto;
+}
+
+
+#dimensions {
+  width: 350px;
+  margin: 15px;
+  height: 340px;
+
+  .plus {
+    display: block;
+    margin: auto;
+    background-color: #818a87;
+    border: none;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 80px;
+    margin-top: 95px;
+    border-radius: 45%;
+    cursor: pointer;
+  } 
+
+  .plus:hover {
+    background-color: RoyalBlue;
+  }
+}
+
+.books {
+  margin-top: 6%;
+  padding-bottom: 60px;
+}
+
+.button{
+  margin-left: 35px;
+  margin-right: 15px;
+  float: right;
+}
+
+.buttonGo{
+  margin-right: 70px;
+  float: right;
+}
+
+.dropdown-menu {
+  position:fixed;
+  width: 500px;
+  top: 90px;
+}
+
+.filtersButton {
+  margin-left: 15px;
+}
+
+.sorting{
+  align-items:center;
+}
+
+::ng-deep.mat-tab-body-wrapper{
+  width: 90% !important;
+}
+  

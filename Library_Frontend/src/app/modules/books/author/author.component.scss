@@ -1,0 +1,47 @@
+.formDisplay {
+  width: 60%;
+  margin: auto;
+
+  #formElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+  }
+}
+
+.container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .table {
+      width: 100%;
+      margin-top: 50px;
+    }
+  
+    .add-button {
+      margin-top: 20px;
+      align-items: center;
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .mat-header-row {
+      height: 1px;
+    }
+
+    th {
+      width: calc(100%/5);
+      text-align: center;
+    } 
+
+    td {
+      width: calc(100%/5);
+      text-align: center;
+    }
+  }
+  

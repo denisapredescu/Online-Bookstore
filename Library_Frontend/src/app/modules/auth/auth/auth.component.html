@@ -1,0 +1,23 @@
+<div class="container">
+    <div id="buttons">
+        <button type="button" class="btn btn-primary" data-toggle="button" [attr.aria-pressed]="loginTabIsOn" [disabled]="loginTabIsOn" (click)="goToLogin()">
+            Login
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="button" [attr.aria-pressed]="!loginTabIsOn" [disabled]="!loginTabIsOn" (click)="goToRegister()">
+            Register
+        </button>
+    </div>
+ 
+    <div class="tab-content">
+        <div *ngIf="loginTabIsOn">
+            <app-login [loginTabIsOn] = loginTabIsOn (status)="receivePageStatus($event)"></app-login>
+        </div>
+        <div *ngIf="!loginTabIsOn">
+            <app-register [loginTabIsOn] = loginTabIsOn (status)="receivePageStatus($event)"></app-register>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary goBack" data-toggle="button" (click)="goToHome()">
+    HOME
+</button>

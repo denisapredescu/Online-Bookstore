@@ -1,0 +1,67 @@
+<div class="form-check formDisplay" *ngIf="!isAdmin()">
+  <div id="formElement" *ngFor="let category of categoriesList">
+    <input class="form-check-input" type="checkbox" value="" (click)="changeValue(category)" id="flexCheckDefault"  [checked]="isChecked(category)">
+    <label class="form-check-label" for="flexCheckDefault">
+      {{category.name}}
+    </label>
+    <span class="badge bg-secondary">{{category.numberOfBooks}}</span>
+  </div>
+</div>
+
+<div class="list" *ngIf="isAdmin()">
+  <table class="categoryList"> 
+    <tr class="title">
+      <th>Category</th>
+      <th>Number of books</th>
+    </tr>
+    <tr *ngFor="let list of categoriesList">
+      <td>{{list.name}}</td>
+      <td>{{list.numberOfBooks}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class = "container" *ngIf="isAdmin()">   
+    <table mat-table [dataSource]="categoriesList" class="mat-elevation-z8 demo-table table">
+
+    <ng-container matColumnDef="Category">
+      <th mat-header-cell *matHeaderCellDef>Category</th>
+      <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef>Edit Category</th>
+        <td mat-cell *matCellDef="let element" (click)="edit(element)">
+          <mat-icon>
+            edit
+          </mat-icon>
+        </td>
+      </ng-container>
+
+    <ng-container  matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef>Delete Category</th>
+      <td mat-cell *matCellDef="let element" (click)="delete(element)">
+        <mat-icon>
+          delete
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container  matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>Select Category</th>
+      <td mat-cell *matCellDef="let element" (click)="changeValue(element)">
+        <mat-icon>
+          add
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+    <button mat-raised-button (click)="add()" class="add-button">
+        Add category
+    </button>
+</div>
