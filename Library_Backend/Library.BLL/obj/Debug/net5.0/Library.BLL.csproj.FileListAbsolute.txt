@@ -1,0 +1,52 @@
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\bin\Debug\net5.0\Library.BLL.deps.json
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\bin\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\bin\Debug\net5.0\ref\Library.BLL.dll
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\bin\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\bin\Debug\net5.0\Library.DAL.dll
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\bin\Debug\net5.0\Library.DAL.pdb
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\obj\Debug\net5.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CopyComplete
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\obj\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\obj\Debug\net5.0\ref\Library.BLL.dll
+C:\Users\denis\Desktop\ASP_sper\Library.BLL\obj\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.deps.json
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\bin\Debug\net5.0\ref\Library.BLL.dll
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.DAL.dll
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.DAL.pdb
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CopyComplete
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\obj\Debug\net5.0\ref\Library.BLL.dll
+C:\Users\denis\Desktop\facultate\PROIECTE\Proiect ASP\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.deps.json
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.DAL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.DAL.pdb
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CopyComplete
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\refint\Library.BLL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\ref\Library.BLL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.deps.json
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.DAL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\bin\Debug\net5.0\Library.DAL.pdb
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.csproj.CopyComplete
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\refint\Library.BLL.dll
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\Library.BLL.pdb
+C:\Users\denis\Desktop\DAW_Predescu_Denisa_242\ASP_Library\Library.BLL\obj\Debug\net5.0\ref\Library.BLL.dll
