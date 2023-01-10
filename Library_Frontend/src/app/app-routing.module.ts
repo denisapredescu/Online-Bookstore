@@ -34,7 +34,6 @@ const routes: Routes = [
 ];
 
 //acum facem o ruta pentru modulul creat
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

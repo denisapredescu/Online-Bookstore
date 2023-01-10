@@ -10,12 +10,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PopupModule } from './modules/popup/popup.module';
 import { MaterialModule } from './modules/material/material.module';
 import { OrderComponent } from './modules/order/order.component';
-// import { MDBBootstrapModule } from 'angular-bootstrap-md';
-// nup
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// 
-// import { DropDownButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
-// import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
@@ -32,11 +26,7 @@ import { FormsModule } from "@angular/forms";
     ReactiveFormsModule,
     PopupModule,
     MaterialModule,
-    // MDBBootstrapModule.forRoot(),
     FormsModule
-    // NgbModule
-    // DropDownButtonModule,
-    // MdbCheckboxModule
   ],
   exports:[
   ],

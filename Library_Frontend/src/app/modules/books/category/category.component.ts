@@ -32,10 +32,6 @@ export class CategoryComponent implements OnInit {
     return true;
   }
 
-  // public select(category: Category): void{
-  //   this.chosenCategories.emit(category.name);
-  // }
-
   public delete(category: Category): void{
     this.categoryService.deleteCategory(category.id).subscribe(
       (response) => {
@@ -79,8 +75,6 @@ export class CategoryComponent implements OnInit {
   public changeValue(category: Category) {
     category.isChecked = !category.isChecked;
     console.log(category);
-    // console.log(this.chosenCategories);
-
     this.chosenCategories.emit(this.categoriesList);
   }
 

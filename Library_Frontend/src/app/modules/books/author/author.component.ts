@@ -27,7 +27,6 @@ export class AuthorComponent implements OnInit {
   @Input() authorsList;
   @Output() chosenAuthors = new EventEmitter<Author[]>();  //dau parintelui
 
-
   constructor(
     private authorService: AuthorService,
     public dialog: MatDialog,
@@ -94,35 +93,23 @@ export class AuthorComponent implements OnInit {
   }
 
   public info(author: Author): void{
-      console.log(author);
+    console.log(author);
 
-      const dialogConfig = new MatDialogConfig();
-      dialogConfig.width = '500px';
-      dialogConfig.height = '400px';
-      dialogConfig.data = author;
-      
-      const dialogRef = this.dialog.open(AuthorDetailsComponent, dialogConfig);
-      dialogRef.afterClosed().subscribe((result) => {
-        console.log(result);
-      });
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '500px';
+    dialogConfig.height = '400px';
+    dialogConfig.data = author;
     
+    const dialogRef = this.dialog.open(AuthorDetailsComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+    }); 
   }
-
-  // public select(author)   //dau parintelui informatia
-  // {
-  //   this.chosenAuthors.emit(author);
-  // }
 
   public changeValue(author: Author) {
     author.isChecked = !author.isChecked;
     console.log(author);
     this.chosenAuthors.emit(this.authorsList);
-
-    // if (this.isAdmin()){
-    //   this.chosenCategories.emit(this.categories);
-    // } else {
-    //   this.chosenCategories.emit(this.messageFromBooks);
-    // }
   }
 
   public isChecked(author: AuthorComponent) {

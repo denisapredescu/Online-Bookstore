@@ -18,4 +18,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AuthRoutingModule { }
-//acum generam o componenta pe care sa facem ruta in modulul asta
