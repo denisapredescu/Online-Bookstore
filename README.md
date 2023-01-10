@@ -9,12 +9,14 @@ In cazul utilizatorului logat, acesta poata sa navigheze precum un user random, 
 <br><br>
 Cele mai multe actiuni pot fi facute de pe un cont de admin. Doar el are posibilitatea sa creeze conturi de admin (si de user daca doreste). Pe langa tot ce poate sa faca un user, adminul poate sa introduca noi carti in librarie, sa modifice orice detaliu referitor la o carte, sa ii modifice autorul, sa o stearga, sa insereze noi categorii, sa insereze noi autori. 
 
+<strong><i>Link catre youtube:</i></strong> [<i>click here</i>](https://www.youtube.com/watch?v=Q0AuPsbrTtw&ab_channel=DenisaPredescu)
+
 ## <i>Cerinte</i> (proiectul este realizat in angular):
 - Sa aiba mai multe rute:
-  - ruta principala: `['/books']` care aprinde pagina de home in care se pot vedea toate cartile si se poate apasa pe diverse butoane pentru a merge in alte pagini (componente utilizate: HomeComponent, BookComponent, CategoryComponent, AuthorComponent)
-  - `['/auth']`: pagina contine 2 componente: LoginComponent si RegisterComponent. By default apare pagina de login, dar utilizatorul poate face switch la cealalta.
-  - `['/orders']`: aici utilizatorul vede toate comenzile realizate de el in trecut
-  - `['/basket']`: pagina in care ii este prezentat cosul curent
+  - ruta principala: `['books']` care aprinde pagina de home in care se pot vedea toate cartile si se poate apasa pe diverse butoane pentru a merge in alte pagini (componente utilizate: HomeComponent, BookComponent, CategoryComponent, AuthorComponent)
+  - `['auth']`: pagina contine 2 componente: LoginComponent si RegisterComponent. By default apare pagina de login, dar utilizatorul poate face switch la cealalta.
+  - `['orders']`: aici utilizatorul vede toate comenzile realizate de el in trecut
+  - `['basket']`: pagina in care ii este prezentat cosul curent
 - Sa se foloseasca componente reutilizabile: `componenta reutilizabila folosita este BookComponent` care se foloseste o data pentru fiecare carte din librarie
 - Sa se comunice intre componente: se folosesc toate cele 3 tipuri de comunicare
   - `@Input` si `@Output` pentru comunicarea dintre componenta parinte si componenta copil (si invers): sunt des folosite, intre fiecare componente parinte-copil este utilizata macar un tip de comunicare deoarece deseori se realizeara modificari care trebuie updatate. De exemplu, cand userul selecteaza ce caegorii doreste sa aiba cartile, componenta Home trebuie sa primeasca de la componenta copil Category categoriile selectate. In sens invers componenta category trebuie sa stie ce categorii a ales anterior utilizatrul ca sa faca checkboxul by default selectat in dreptul lor. 
@@ -29,4 +31,4 @@ Cele mai multe actiuni pot fi facute de pe un cont de admin. Doar el are posibil
   - form update category
   - form add author
   - form update author
-- Firebase sau orice alt mediu de backend: backendul este cel creat anul trecut la DAW, modificat pentru a-i aduce mai multa dificultate si pentru a atinge viziunea acestui frontend.
+- Firebase sau orice alt mediu de backend: backendul este cel creat anul trecut la DAW (cu .NET), modificat pentru a-i aduce mai multa dificultate si pentru a se potrivi cu viziunea acestui frontend.
