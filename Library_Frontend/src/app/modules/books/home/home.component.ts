@@ -226,8 +226,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
       var temporaryBooksAuthorList = [];
       var temporaryBooksCategoryList = [];
-      var pass = 0;
-      for (var i = 0; i < listOfAuthorIds.length && pass == 0; ++i) {
+      for (var i = 0; i < listOfAuthorIds.length; ++i) {
         this.bookService.getBooksWithAuthor(listOfAuthorIds[i]).subscribe(
           (response) => {
           if (temporaryBooksAuthorList.length === 0) {
@@ -248,9 +247,8 @@ export class HomeComponent implements OnInit, OnDestroy {
           }
 
           if (i >= listOfAuthorIds.length - 1) {
-            pass++;
-
-            for (var j = 0; j < listOfCategories.length && pass == 1; ++j) {
+            
+            for (var j = 0; j < listOfCategories.length; ++j) {
               this.bookService.getBookWithCategory(listOfCategories[j]).subscribe(
               (response) => {
                 if(temporaryBooksCategoryList.length === 0) {
@@ -272,25 +270,22 @@ export class HomeComponent implements OnInit, OnDestroy {
     
                 if (j >= listOfCategories.length - 1) {
                   console.log(temporaryBooksCategoryList);
-                  pass++;
-                  if (pass == 2) {
-                    console.log("liste intermediare");
-                    console.log(temporaryBooksAuthorList);
-                    console.log(temporaryBooksCategoryList);
+                  console.log("liste intermediare");
+                  console.log(temporaryBooksAuthorList);
+                  console.log(temporaryBooksCategoryList);
 
-                    this.books = [];
-                    var isCommon;
-                    var indexA = 0, indexC = 0;
-                    for (indexA = 0; indexA < temporaryBooksAuthorList.length; indexA++) {
-                      isCommon = false;
-                      for (indexC = 0; indexC < temporaryBooksCategoryList.length ; indexC++) {
-                        if(temporaryBooksAuthorList[indexA].id === temporaryBooksCategoryList[indexC].id) {
-                          isCommon = true;
-                        }
+                  this.books = [];
+                  var isCommon;
+                  var indexA = 0, indexC = 0;
+                  for (indexA = 0; indexA < temporaryBooksAuthorList.length; indexA++) {
+                    isCommon = false;
+                    for (indexC = 0; indexC < temporaryBooksCategoryList.length ; indexC++) {
+                      if(temporaryBooksAuthorList[indexA].id === temporaryBooksCategoryList[indexC].id) {
+                        isCommon = true;
                       }
-                      if (isCommon) {
-                        this.books.push(temporaryBooksAuthorList[indexA]);
-                      }
+                    }
+                    if (isCommon) {
+                      this.books.push(temporaryBooksAuthorList[indexA]);
                     }
 
                     console.log("lista oficiala", this.books);

@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Author } from 'src/app/interfaces/author';
 import { AuthorInfo } from 'src/app/interfaces/author-info';
 import { Book } from 'src/app/interfaces/book';
 import { AuthorService } from 'src/app/services/author.service';
@@ -49,6 +48,10 @@ export class BookComponent implements OnInit {
   ngOnInit() {
     this.subscription = this.sharedDataService.currentEmailUser.subscribe((sharedEmail) => this.sharedEmail = sharedEmail);
   
+    this.getAuthorAndCategories();
+  }
+
+  private getAuthorAndCategories(): void {
     if (this.book.authorId !== null) {
       this.authorService.GetAuthorInfo(this.book.authorId).subscribe(
         (response) => {
@@ -91,7 +94,6 @@ export class BookComponent implements OnInit {
   }
 
   public openModal(book?): void {
-    console.log("intra aici");
     console.log(book);
     const data = {
       book
@@ -105,11 +107,10 @@ export class BookComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       console.log(result);
       if (result) {
-        // this.modifiedList = result;
         console.log("succes");
         this.modifiedList.emit(result);
-        // if (book !== null)
-        //   this.book = book;
+
+        this.getAuthorAndCategories(); //actualizez autorul si categoriile
       }
     });
   }

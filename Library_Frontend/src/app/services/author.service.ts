@@ -9,11 +9,15 @@ import { AuthorInfo } from '../interfaces/author-info';
 })
 export class AuthorService {
 
-  httpOptions = {
-    headers: new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Authorization', 'Bearer ' + localStorage.getItem('accessToken'))
-  };
+  private getOptions(author: any): any{
+    const options = {
+      headers: new HttpHeaders()
+          .set('Content-Type', 'application/json')
+          .set('Authorization', 'Bearer ' + localStorage.getItem('accessToken')),
+      body: author,
+    };
+    return options;
+  }
 
   public url = "https://localhost:44326/api/author";
 
@@ -23,34 +27,37 @@ export class AuthorService {
 
 
   //POST
-  public AddAuthor(author: Author) :Observable<Author[]>{
-    return this.http.post<Author[]>(`${this.url}/AddAuthor`, author, this.httpOptions);
+  public AddAuthor(author: Author) :Observable<any>{
+    const options = this.getOptions(author);
+    console.log(options);
+    return this.http.post<Author[]>(`${this.url}/AddAuthor`, author, options);
   }
 
   //POST
-  public AddAuthorInfo(authorInfo: AuthorInfo) :Observable<AuthorInfo>{
-    return this.http.post<AuthorInfo>(`${this.url}/AddAuthorInfo`, authorInfo, this.httpOptions);
+  public AddAuthorInfo(authorInfo: AuthorInfo) :Observable<any>{
+    const options = this.getOptions(authorInfo);
+    console.log(options);
+    return this.http.post<AuthorInfo>(`${this.url}/AddAuthorInfo`, authorInfo, options);
   }
 
   //UPDATE
-  public UpdateAuthor(author: Author) :Observable<Author[]>{
-    return this.http.put<Author[]>(`${this.url}/UpdateAuthor`, author, this.httpOptions);
+  public UpdateAuthor(author: Author) :Observable<any>{
+    const options = this.getOptions(author);
+    console.log(options);
+    return this.http.put<Author[]>(`${this.url}/UpdateAuthor`, author, options);
   }
 
   //UPDATE
-  public UpdateAuthorInfo(authorInfo: AuthorInfo) :Observable<AuthorInfo>{
-    console.log(authorInfo);
-    return this.http.put<AuthorInfo>(`${this.url}/UpdateAuthorInfo`, authorInfo, this.httpOptions);
+  public UpdateAuthorInfo(authorInfo: AuthorInfo) :Observable<any>{
+    const options = this.getOptions(authorInfo);
+    console.log(options);
+    return this.http.put<AuthorInfo>(`${this.url}/UpdateAuthorInfo`, authorInfo, options);
   }
 
   //DELETE
   public DeleteAuthor(author) :Observable<any>{
-    const options = {
-          headers: new HttpHeaders()
-              .set('Content-Type', 'application/json')
-              .set('Authorization', 'Bearer ' + localStorage.getItem('accessToken')),
-          body: author,
-        };
+    const options = this.getOptions(author);
+    console.log(options);
     return this.http.delete<any>(`${this.url}/DeleteAuthor`, options);  
   }
 

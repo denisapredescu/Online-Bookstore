@@ -18,11 +18,6 @@ export class BookService {
     };
     return options;
   }
-  httpOptions = {
-    headers: new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Authorization', 'Bearer ' + localStorage.getItem('accessToken'))
-  };
 
   //metodele din tabelul asociativ sunt puse in service-urile tabelelor Book si Basket
   //de asemenea, iau si o metoda din BasketController pentru ca in pagina HomeComponent selectez cartile pe care vreau sa le pun in cos
@@ -37,47 +32,18 @@ export class BookService {
 
 
   public addBook(book: Book): Observable<any> {
-    // const options = {
-    //   headers: new HttpHeaders()
-    //       .set('Content-Type', 'application/json')
-    //       .set('Authorization', 'Bearer ' + localStorage.getItem('accessToken')),
-    //   body: book,
-    // };
-    // console.log("ajunge in service");
-    // console.log(book);
-    // return this.http.post<Book[]>(`${this.urlBook}/AddBook`, options);
     const options = this.getOptions(book);
     console.log(options);
-  
     return this.http.post<Book[]>(`${this.urlBook}/AddBook`, book, options);
   }
 
   public updateBook(book:Book):Observable<any> {
-    
-    console.log("ajunge in service");
-    console.log(book);
-    const token = localStorage.getItem('accessToken');
-    // return this.http.put<Book[]>(`${this.urlBook}/UpdateBook`, book, this.httpOptions);
-
-    // const options = {
-    //   headers: new HttpHeaders()
-    //       .set('Content-Type', 'application/json')
-    //       .set('Authorization', 'Bearer ' + token),
-    //   body: book,
-    // };
     const options = this.getOptions(book);
     console.log(options);
     return this.http.put<Book[]>(`${this.urlBook}/UpdateBook`, book, options);
   }
   
   public deleteBook(book: Book): Observable<any> {
-    console.log(book);
-    // const options = {
-    //   headers: new HttpHeaders()
-    //       .set('Content-Type', 'application/json')
-    //       .set('Authorization', 'Bearer ' + localStorage.getItem('accessToken')),
-    //   body: book,
-    // };
     const options = this.getOptions(book);
     console.log(options);
     return this.http.delete<Book[]>(`${this.urlBook}/DeleteBook`, options);
@@ -109,7 +75,9 @@ export class BookService {
   }
 
   public addCategoryToBook(bookCategory: any): Observable<any> {
-    return this.http.post<any>(`${this.urlBook}/AddCategoryToBook`, bookCategory, this.httpOptions);
+    const options = this.getOptions(bookCategory);
+    console.log(options);
+    return this.http.post<any>(`${this.urlBook}/AddCategoryToBook`, bookCategory, options);
   }
 
   public geCategoriesForBook(bookId: number): Observable<String[]>{

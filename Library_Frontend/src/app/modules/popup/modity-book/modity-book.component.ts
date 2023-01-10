@@ -26,9 +26,6 @@ export class ModityBookComponent implements OnInit {
     authorId: new FormControl(null)
   });
 
-  // file: File;
-  // nup
-
   public title;
   public authors: Author[];
   public categories: Category[];
@@ -44,33 +41,16 @@ export class ModityBookComponent implements OnInit {
     if (data.book) {
       this.title = 'Edit book';
       this.bookForm.patchValue(this.data.book);
-      // this.bookForm.value.authorId = this.data.book.authorId;
     } else {
       this.title = 'Add book';
     }
-
-    // console.log("autori");
-    // this.authorService.GetAuthors().subscribe(
-    //   (response) => {
-        
-    //     // console.log(response);
-    //     this.authors = response;
-    //   },
-    //   (error) => {
-    //     console.error(error);
-    //   });
-
-    // console.log(this.authors);
   }
 
   ngOnInit() {
-    // console.log("autori");
+
     this.authorService.GetAuthors().subscribe(
       (response) => {
-        
-        // console.log(response);
         this.authors = response;
-        // console.log(response);
       },
       (error) => {
         console.error(error);
@@ -84,22 +64,11 @@ export class ModityBookComponent implements OnInit {
         console.log(error);
       }
     );
-    // console.log(this.authors);
   }
 
-  // nup
-  // onFileAdd(file: File) {
-  //   this.file = file;
-  //   console.log(this.file);
-  // }
-
-  // onFileRemove() {
-  //   this.file = null;
-  // }
-
   public add(): void {
-
     console.log(this.bookForm.value);
+
     if (this.bookForm.value.authorId === "null" || this.bookForm.value.authorId === "none") {
       this.bookForm.value.authorId = null;
     } else {
@@ -122,7 +91,6 @@ export class ModityBookComponent implements OnInit {
 
                 this.bookService.addCategoryToBook(bookCategory).subscribe(
                   (response) => {
-                    console.log("ajung aici");
                     console.log(response);
                   },
                   (error) => {
@@ -131,7 +99,6 @@ export class ModityBookComponent implements OnInit {
               }
             });
           },
-
           (error) => {
             console.error(error);
           }
@@ -145,8 +112,8 @@ export class ModityBookComponent implements OnInit {
   }
 
   public edit(): void {
-    console.log("in modify");
     console.log(this.bookForm.value);
+    
     if (this.bookForm.value.authorId === "null" || this.bookForm.value.authorId === "none") {
       this.bookForm.value.authorId = null;
     } else {
