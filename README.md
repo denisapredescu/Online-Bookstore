@@ -17,8 +17,8 @@ Cele mai multe actiuni pot fi facute de pe un cont de admin. Doar el are posibil
 - Sa aiba mai multe rute:
   - ruta principala: `['books']` care aprinde pagina de home in care se pot vedea toate cartile si se poate apasa pe diverse butoane pentru a merge in alte pagini (componente utilizate: HomeComponent, BookComponent, CategoryComponent, AuthorComponent)
   - `['auth']`: pagina contine 2 componente: LoginComponent si RegisterComponent. By default apare pagina de login, dar utilizatorul poate face switch la cealalta.
-  - `['orders']`: aici utilizatorul vede toate comenzile realizate de el in trecut
-  - `['basket']`: pagina in care ii este prezentat cosul curent
+  - `['orders/{email}']`: utilizatorul vede toate comenzile realizate de el in trecut (ruta cu parametru)
+  - `['basket/{email}']`: pagina in care ii este prezentat utilizatorului cosul curent (ruta cu parametru)
 - Sa se foloseasca componente reutilizabile: `componenta reutilizabila folosita este BookComponent` care se foloseste o data pentru fiecare carte din librarie
 - Sa se comunice intre componente: se folosesc toate cele 3 tipuri de comunicare
   - `@Input` si `@Output` pentru comunicarea dintre componenta parinte si componenta copil (si invers): sunt des folosite, intre fiecare componente parinte-copil este utilizata macar un tip de comunicare deoarece deseori se realizeara modificari care trebuie updatate. De exemplu, cand userul selecteaza ce caegorii doreste sa aiba cartile, componenta Home trebuie sa primeasca de la componenta copil Category categoriile selectate. In sens invers componenta category trebuie sa stie ce categorii a ales anterior utilizatrul ca sa faca checkboxul by default selectat in dreptul lor. 
