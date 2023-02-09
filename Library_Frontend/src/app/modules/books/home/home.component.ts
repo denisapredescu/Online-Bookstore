@@ -17,12 +17,10 @@ import { ModityBookComponent } from '../../popup/modity-book/modity-book.compone
   styleUrls: ['./home.component.scss']
 })
 
-
 //Componenta Home trimite emailul catre Basket printr-o ruta cu param
 //Componenta Home trimite emailul catre Order printr-o ruta cu param
 
-//comunicarea dintre Author si Category cu Book se face prin relatia parinte-copil (input)
-//Home (parinte) trimite informatii doar copilului Category (Output)
+//comunicarea dintre Author si Category cu Book se face prin relatia parinte-copil (input, output)
 
 export class HomeComponent implements OnInit, OnDestroy {
 
@@ -314,5 +312,3 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.router.navigate(['orders/', this.sharedEmail]);
   }
 }
-
-
