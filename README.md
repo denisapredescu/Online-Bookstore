@@ -1,6 +1,8 @@
 # Online-Bookstore
 
-Proiectul este realizat pentru cursul de Front-end avansat(Angular si React), semestrul 1, anul 3, la Facultatea de Matematica si Informatica din cadrul Universitatii Bucuresti. Am ales sa folosesc Angular si sa mimez in acest proiect o librarie online.
+Proiectul este realizat pentru cursul de Frontend avansat (Angular si React) 2022-2023, semestrul 1, anul 3, la Facultatea de Matematica si Informatica din cadrul Universitatii Bucuresti. 
+
+Am ales sa folosesc Angular si sa mimez in acest proiect o librarie online.
 
 ## <i>Mod de utilizare:</i>
 Userul poate sa navigheze prin cartile din baza de date si sa le filtreze dupa categorie si/sau author, sa vada detalii despre autori si despre cartile disponibile. Daca doreste sa introduca carti in cos, trebuie sa aiba/sa isi creeze un cont si sa se logheze. 
